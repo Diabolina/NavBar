@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"></link>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
+  <style type="text/css"> 
+* {
+margin:0;
+padding:0;
+}
+ 
+body {
+background:#FFFFF;
+}
+ 
+header {
+width:100%;
+}
+ 
+header nav {
+width:90%;
+max-width:1000px;
+margin:20px auto;
+background:#01545a;
+}
+ 
+.menu_bar {
+display:none;
+}
+ 
+header nav ul {
+overflow:hidden;
+list-style:none;
+}
+ 
+header nav ul li {
+float:left;
+}
+ 
+header nav ul li a {
+color:#fff;
+padding:20px;
+display:block;
+text-decoration:none;
+}
+ 
+header nav ul li span {
+margin-right:10px;
+}
+ 
+header nav ul li a:hover {
+background:#AAD962;
+}
+ 
+section {
+padding:20px;
+}
+ 
+@media screen and (max-width:800px ) {
+header nav {
+width:80%;
+height:100%;
+left:-100%;
+margin:0;
+position: fixed;
+}
+ 
+header nav ul li {
+display:block;
+float:none;
+border-bottom:1px solid rgba(255,255,255, .3);
+}
+ 
+.menu_bar {
+display:block;
+width:100%;
+background:#ccc;
+}
+ 
+.menu_bar .bt-menu {
+display:block;
+padding:20px;
+background:#01545a;
+color:#fff;
+text-decoration:none;
+font-weight: bold;
+font-size:25px;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+ 
+.menu_bar span {
+float:right;
+font-size:40px;
+}
+}
+
+</style> 
+</head>
+<body>
+<header>
+		<div class="menu_bar">
+			<a class="bt-menu"><i class="fa fa-bars fa-fw"></i>Menu</a>
+		</div>
+ 
+		<nav>
+			<ul>
+				<li><a href="https://sites.google.com/site/prueba123654987/home"><i class="fa fa-home fa-fw"></i>INICIO</a></li>
+				<li><a href="https://sites.google.com/site/prueba123654987/nosotros"><i class="fa fa-building-o fa-fw"></i>NOSOTROS</a></li>
+				<li><a href="https://sites.google.com/site/prueba123654987/servicios"><i class="fa fa-rocket fa-fw"></i>SERVICIOS</a></li>
+				<li><a href="https://sites.google.com/site/prueba123654987/pisos"><i class="fa fa-camera-retro fa-fw"></i>GALERIA</a></li>
+				<li><a href="https://sites.google.com/site/prueba123654987/contacto"><i class="fa fa-envelope-o fa-fw"></i>CONTACTO</a></li>
+                <li><a href="https://sites.google.com/site/prueba123654987/blog"><i class="fa fa-rss fa-fw"></i>BLOG</a></li>
+                <li><a href="https://sites.google.com/site/prueba123654987/miniprueba"><i class="fa fa-envelope-o fa-fw"></i>miniprueba</a></li>
+                <li><a href="https://sites.google.com/site/prueba123654987/prueba-2"><i class="fa fa-rss fa-fw"></i>prueba2</a></li>
+			</ul>
+		</nav>
+	</header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+$(document).ready(main);
+ 
+var contador = 1;
+ 
+function main(){
+$('.menu_bar').click(function(){
+// $('nav').toggle();
+ 
+if(contador == 1){
+$('nav').animate({
+left: '0'
+});
+contador = 0;
+} else {
+contador = 1;
+$('nav').animate({
+left: '-100%'
+});
+}
+ 
+});
+ 
+};
+</script>
+</body>
